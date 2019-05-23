@@ -1,0 +1,23 @@
+from django.test import TestCase
+
+from app.calc import add
+from app.calc import subtract
+
+class CalcTests(TestCase):
+    # test functions must all begin with 'test'
+    def test_add_numbers(self):
+        """Test that two numbers are added together"""
+        self.assertEqual(add(3, 8), 11)
+
+    def test_subtract_numbers(self):
+        """Test that two numbers are correctly subtracted"""
+        self.assertEqual(subtract(5, 11), 6)
+
+# Tutorial Notes
+# Test driven development ensures that the test works as intended before
+# implementing the main program, ensuring the validity of the test itself.
+# Before you write code, you must think about how to test it
+
+# Note: To utilize Django's test framework,
+# The test file/module must begin with 'test', and each of the methods
+# or functions in the module must begin with test, as well
